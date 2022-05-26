@@ -1,4 +1,5 @@
 FROM nvidia/cuda:11.0-base
+RUN apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub
 RUN apt update
 RUN apt install -y python3 python3-pip
 RUN pip3 install torch
